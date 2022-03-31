@@ -45,7 +45,7 @@
 
 .dark-theme{
     --background-color:rgba(255,255,255,0.8);
-    --text-color:rgba(0,0,0,0.8);
+    --text-color:rgba(0, 0, 0, 0.8);
 }
 
 #mode{
@@ -64,7 +64,6 @@ p{
 /* style navabar */
 
 nav{
-    color: var(--secondary-color) !important;
     transition: all 0.3s ease !important;
 }
 
@@ -83,14 +82,9 @@ nav{
     color: var(--secondary-color) !important;
     font-size: 1rem;
     font-weight: 500;
-    border-radius: 20px;
 }
 
 .navbar li a:hover{
-    color: var(--primary-color) !important;
-    background-color: rgba(255, 255, 0, 0.7) !important;
-    padding: 15px;
-    border-radius: 20px;
     font-weight: 800;
 }
 
@@ -98,6 +92,15 @@ nav{
     background-color: var(--primary-color);
 }
 
+/* #navbarNav ul li a */
+.active{
+    border-bottom:5px solid var(--secondary-color);
+    font-weight: 800;
+}
+.coloring{
+    border-bottom:5px solid var(--secondary-color);
+    font-weight: 800;
+}
 /* home section */
 
 .home{

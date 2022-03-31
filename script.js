@@ -46,9 +46,11 @@ var mode = document.getElementById("mode");
         document.body.classList.toggle("dark-theme")
         if(document.body.classList.contains('dark-theme')){
         modes.innerHTML = 'light_mode'
+        modes.style.color = 'white'
         modes.setAttribute('title', "light mode")
     }else{
         modes.innerText = 'dark_mode'
+        modes.style.color = 'grey'
         modes.setAttribute('title', "dark mode")
     }
     })
@@ -59,3 +61,37 @@ var loader = document.querySelector(".main_div");
         window.addEventListener('load', function(){
             loader.style.display = 'none';
         })
+
+        // onclick style to navbar
+
+       let navbar=document.querySelector('#navbarNav').querySelectorAll('a')
+console.log(navbar)
+
+       navbar.forEach(element =>{
+         element.addEventListener('click', function(){
+           navbar.forEach(nav=>nav.classList.remove('coloring'))
+
+           this.classList.add('coloring')
+
+          })
+
+       })
+
+      //  scroll effect on nav
+
+      const li = document.querySelectorAll(".nav-link");
+const sec = document.querySelectorAll("section");
+
+function activeMenu(){
+    let len = sec.length;
+    while(--len && window.scrollY + 450 < sec[len].offsetTop){}
+    li.forEach(ltx => ltx.classList.remove('coloring'));
+    li[len].classList.add('coloring');
+}
+window.addEventListener('scroll', activeMenu);
+
+function checkRefresh()
+{
+    window.location.hash = ('#home');
+    window.scroll(0,0);
+}
