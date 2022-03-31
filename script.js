@@ -36,5 +36,26 @@ function goToTop(){
     btncontactMe.classList.remove('coloring');
 }
 
+// mode
 
+var mode = document.getElementById("mode");
 
+    var modes = document.querySelector('.material-icons')
+
+    mode.addEventListener('click', function(){
+        document.body.classList.toggle("dark-theme")
+        if(document.body.classList.contains('dark-theme')){
+        modes.innerHTML = 'light_mode'
+        modes.setAttribute('title', "light mode")
+    }else{
+        modes.innerText = 'dark_mode'
+        modes.setAttribute('title', "dark mode")
+    }
+    })
+
+// preloader
+
+var loader = document.querySelector(".main_div");
+        window.addEventListener('load', function(){
+            loader.style.display = 'none';
+        })

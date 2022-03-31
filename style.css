@@ -6,10 +6,55 @@
     outline: none !important;
 }
 :root{
-    --background-color : rgba(0, 0, 0, 1);
-    --text-color : rgba(255, 255, 255, 1);
+    --background-color : rgba(0, 0, 0, 0.8);
+    --text-color : rgba(255,255,255,0.8);
     --primary-color : rgba(128, 0, 128, 1);
     --secondary-color : rgb(255, 255, 0, 1);
+}
+
+/* preloader */
+
+.main_div{
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: grid;
+    place-items: center;
+}
+
+.center_div{
+    width: 75px;
+    height: 75px;
+    position: relative;
+    border-right: 5px solid white;
+    border-radius: 50%;
+    animation: rot 2s linear infinite;
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* dark and light mode */
+
+.dark-theme{
+    --background-color:rgba(255,255,255,0.8);
+    --text-color:rgba(0,0,0,0.8);
+}
+
+#mode{
+    cursor: pointer;
+}
+
+body{
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
 
 p{
@@ -173,6 +218,10 @@ nav{
     font-weight: 600;
     background: none;
     transition: all 1s ease;
+}
+
+.about-content .container{
+    border: 1px solid black;
 }
 
 .center-block {
