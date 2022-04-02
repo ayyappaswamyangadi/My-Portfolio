@@ -91,24 +91,24 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="mx-auto"></div>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home" >Home</a>
+            <li class="nav-item ">
+              <a class="nav-link home" aria-current="page" href="#home" >Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+            <li class="nav-item ">
+              <a class="nav-link about" href="#about">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#mySkills" >My skills</a>
+            <li class="nav-item ">
+              <a class="nav-link mySkills" href="#mySkills" >My skills</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
+            <li class="nav-item ">
+              <a class="nav-link projects" href="#projects">Projects</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+            <li class="nav-item ">
+              <a class="nav-link contact" href="#contact">Contact</a>
             </li>
             <!-- dark and light mode -->
             <li>
-                <div id="mode" href="#" tabindex="-1"><i class="material-icons" style="color: grey;" title="dark mode">dark_mode</i></div>
+                <div id="mode" href="#" tabindex="-1"><i class="material-icons" style="color: grey;" title="switch to dark mode">dark_mode</i></div>
             </li>
           </ul>
         </div>
@@ -116,7 +116,7 @@
     </nav>
 
     <section
-      class="home w-100 vh-100 d-flex justify-content-flex-start align-items-center"
+      class="homeSection w-100 vh-100 d-flex justify-content-flex-start align-items-center"
       id="home"
     >
       <div class="home-content text-center">
@@ -128,7 +128,7 @@
       </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="aboutSection" id="about">
       <h2 class="title mb-3">About - me</h2>
       <div
         class="about-content d-flex justify-content-center align-items-center"
@@ -200,10 +200,10 @@
     </section>
 
     <!-- my skills -->
-    <section id="mySkills">
+    <section id="mySkills" class="mySkillsSection">
       <h3 class="section-title mb-3">My Skills</h3>
       <div
-        class="row mySkills d-flex flex-wrap justify-content-center align-items-center"
+        class="row mySkillsGrid d-flex flex-wrap justify-content-center align-items-center"
       >
         <div class="main-container mb-2 me-2">
           <div class="theCard">
@@ -322,7 +322,7 @@
 
     <!-- projects list -->
 
-    <section id="projects">
+    <section id="projects" class="projectsSection">
       <h1 class="section-title mb-3">My Projects</h1>
 
       <div class="carousel">
@@ -402,7 +402,7 @@
     </section>
 
     <!-- contact me -->
-    <section id="contact">
+    <section id="contact" class="contactSection">
       <h3 class="section-title mb-3">Contact Me</h3>
       <div class="row mb-3 ">
         <div class="col-12 col-md-4 col-lg-4 contactMe mb-3 d-flex flex-wrap justify-content-center align-items-center flex-column">
@@ -414,7 +414,7 @@
           <a href="mailto:ayyappaswamy50@gmail.com">ayyappaswamy50@gmail.com</a></div>
         </div>
         <div class="col-12 col-md-4 col-lg-4 contactMe mb-3 d-flex flex-wrap justify-content-center align-items-center flex-column">
-          <p>My Number</p>
+          <p>My Phone Number</p>
           <span class="material-icons" style="color: green;">
             call
             </span>

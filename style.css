@@ -41,6 +41,7 @@
     }
 }
 
+
 /* dark and light mode */
 
 .dark-theme{
@@ -60,6 +61,7 @@ body{
 p{
     font-size: 1.1rem;
 }
+
 
 /* style navabar */
 
@@ -95,15 +97,12 @@ nav{
 /* #navbarNav ul li a */
 .active{
     border-bottom:5px solid var(--secondary-color);
-    font-weight: 800;
+    font-weight: 800 !important;
 }
-.coloring{
-    border-bottom:5px solid var(--secondary-color);
-    font-weight: 800;
-}
+
 /* home section */
 
-.home{
+.homeSection{
     background: url(assets/background-banner.png);
     background-attachment: fixed;
     background-size: cover;
@@ -111,27 +110,27 @@ nav{
     padding-left: 150px !important;
 }
 
-.home .home-content .text-1{
+.homeSection .home-content .text-1{
     font-size: 2rem;
 }
 
-.home .home-content .text-2{
+.homeSection .home-content .text-2{
     font-size: 5rem;
     font-weight: 600;
     margin-left: -3px;
 }
 
-.home .home-content .text-3{
+.homeSection .home-content .text-3{
     font-size: 2rem;
     margin: 5px 0;
 }
 
-.home .home-content .text-3 span{
+.homeSection .home-content .text-3 span{
     color: var(--primary-color);
     font-weight: 500;
 }
 
-.home .home-content a{
+.homeSection .home-content a{
     display: inline-block;
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -142,7 +141,7 @@ nav{
     border: 2px solid var(--primary-color);
 }
 
-.home .home-content a:hover{
+.homeSection .home-content a:hover{
     color: var(--primary-color);
     background: none;
     transition: all 1s ease;
@@ -151,7 +150,7 @@ nav{
 
 /* about-section */
 
-.about .title{
+.aboutSection .title{
     position: relative;
     text-align: center;
     color: var(--primary-color);
@@ -161,7 +160,7 @@ nav{
     padding-bottom: 20px;
 }
 
-.about .title::before{
+.aboutSection .title::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -173,7 +172,7 @@ nav{
     transform: translateX(-50%);
 }
 
-.about .title::after{
+.aboutSection .title::after{
     content: 'who I am';
     position: absolute;
     bottom: -10px;
@@ -186,26 +185,26 @@ nav{
     transform: translateX(-50%);
 }
 
-.about .about-content .left .text{
+.aboutSection .about-content .left .text{
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
-.about .about-content .left .text span{
+.aboutSection .about-content .left .text span{
     color: var(--primary-color);
 }
-.about .about-content .left .text{
+.aboutSection .about-content .left .text{
     font-size: 2rem;
     font-weight: 600;
     /* padding: 30px; */
 }
 
-.about .about-content .left p{
+.aboutSection .about-content .left p{
     text-align: justify;
 }
 
-.about .about-content .left a{
+.aboutSection .about-content .left a{
     display: inline-block;
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -216,7 +215,7 @@ nav{
     border: 2px solid var(--primary-color);
 }
 
-.about .about-content .left a:hover{
+.aboutSection .about-content .left a:hover{
     color: var(--primary-color);
     font-weight: 600;
     background: none;
@@ -241,7 +240,9 @@ nav{
       text-decoration: underline !important;
   }
 
-  .mySkills{
+  /* My Skills */
+
+  .mySkillsGrid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     overflow: hidden;

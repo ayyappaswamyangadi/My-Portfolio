@@ -1,8 +1,10 @@
+// transparent navbar
+
 var nav = document.querySelector('nav');
 var halfPart = document.querySelector('.halfPart');
 
 window.addEventListener('scroll', function(){
-  if(window.pageYOffset > 20){
+  if(window.pageYOffset > 50){
     nav.classList.add('sticky');
     halfPart.style.color = "yellow"
   }else{
@@ -18,25 +20,17 @@ function checkRefresh()
     window.scroll(0,0);
 }
 
-var goToTopbutton = document.getElementById("top");
+var goToTopButton = document.getElementById("top");
 
 window.onscroll = function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    goToTopbutton.style.display = "block";
+    goToTopButton.style.display = "block";
   } else {
-    goToTopbutton.style.display = "none";
+    goToTopButton.style.display = "none";
   }
 }
 
-function goToTop(){
-    window.scroll(0,0);
-    btnHome.classList.add('coloring');
-    btnaboutMe.classList.remove('coloring');
-    btnmySkills.classList.remove('coloring');
-    btncontactMe.classList.remove('coloring');
-}
-
-// mode
+// light and dark mode
 
 var mode = document.getElementById("mode");
 
@@ -47,11 +41,11 @@ var mode = document.getElementById("mode");
         if(document.body.classList.contains('dark-theme')){
         modes.innerHTML = 'light_mode'
         modes.style.color = 'white'
-        modes.setAttribute('title', "light mode")
+        modes.setAttribute('title', "switch to light mode")
     }else{
         modes.innerText = 'dark_mode'
         modes.style.color = 'grey'
-        modes.setAttribute('title', "dark mode")
+        modes.setAttribute('title', "switch to dark mode")
     }
     })
 
@@ -62,36 +56,46 @@ var loader = document.querySelector(".main_div");
             loader.style.display = 'none';
         })
 
-        // onclick style to navbar
+// onScroll style to navbar
 
-       let navbar=document.querySelector('#navbarNav').querySelectorAll('a')
-console.log(navbar)
+var homeSectionHeight = document.querySelector('.homeSection').clientHeight
+var aboutSectionHeight = document.querySelector('.aboutSection').clientHeight
+var mySkillsSectionHeight = document.querySelector('.mySkillsSection').clientHeight
+var projectsSectionHeight = document.querySelector('.projectsSection').clientHeight
+var contactSectionHeight = document.querySelector('.contactSection').clientHeight
 
-       navbar.forEach(element =>{
-         element.addEventListener('click', function(){
-           navbar.forEach(nav=>nav.classList.remove('coloring'))
 
-           this.classList.add('coloring')
+window.addEventListener('scroll', ()=>{
+  let scrollValue = this.scrollY
 
-          })
-
-       })
-
-      //  scroll effect on nav
-
-      const li = document.querySelectorAll(".nav-link");
-const sec = document.querySelectorAll("section");
-
-function activeMenu(){
-    let len = sec.length;
-    while(--len && window.scrollY + 450 < sec[len].offsetTop){}
-    li.forEach(ltx => ltx.classList.remove('coloring'));
-    li[len].classList.add('coloring');
+if(scrollValue <= homeSectionHeight/1.5){
+  document.querySelector('.home').classList.add('active')
+}else{
+  document.querySelector('.home').classList.remove('active')
 }
-window.addEventListener('scroll', activeMenu);
 
-function checkRefresh()
-{
-    window.location.hash = ('#home');
-    window.scroll(0,0);
+if(scrollValue > homeSectionHeight/1.5 && scrollValue <= homeSectionHeight+aboutSectionHeight/1.5){
+  document.querySelector('.about').classList.add('active')
+}else{
+  document.querySelector('.about').classList.remove('active')
 }
+
+if(scrollValue > homeSectionHeight+aboutSectionHeight/1.5 && scrollValue <= homeSectionHeight+aboutSectionHeight + mySkillsSectionHeight/2){
+  document.querySelector('.mySkills').classList.add('active')
+}else{
+  document.querySelector('.mySkills').classList.remove('active')
+}
+
+if(scrollValue > homeSectionHeight+aboutSectionHeight + mySkillsSectionHeight/2 && scrollValue <= homeSectionHeight+aboutSectionHeight + mySkillsSectionHeight + projectsSectionHeight*4/100){
+  document.querySelector('.projects').classList.add('active')
+}else{
+  document.querySelector('.projects').classList.remove('active')
+}
+
+if(scrollValue > homeSectionHeight+aboutSectionHeight + mySkillsSectionHeight + projectsSectionHeight*4/100){
+  document.querySelector('.contact').classList.add('active')
+}else{
+  document.querySelector('.contact').classList.remove('active')
+}
+
+})
