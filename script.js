@@ -81,7 +81,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollValue > homeSectionHeight / 1.5 &&
-    scrollValue <= homeSectionHeight + aboutSectionHeight / 1.5
+    scrollValue <= homeSectionHeight + aboutSectionHeight / 2
   ) {
     history.pushState({}, "", "/#about");
     document.querySelector(".about").classList.add("active");
@@ -90,9 +90,9 @@ window.addEventListener("scroll", () => {
   }
 
   if (
-    scrollValue > homeSectionHeight + aboutSectionHeight / 1.5 &&
+    scrollValue > homeSectionHeight + aboutSectionHeight / 2 &&
     scrollValue <=
-      homeSectionHeight + aboutSectionHeight + mySkillsSectionHeight / 3
+      homeSectionHeight + aboutSectionHeight + mySkillsSectionHeight / 3.6
   ) {
     history.pushState({}, "", "/#mySkills");
     document.querySelector(".mySkills").classList.add("active");
@@ -102,7 +102,7 @@ window.addEventListener("scroll", () => {
 
   if (
     scrollValue >
-      homeSectionHeight + aboutSectionHeight + mySkillsSectionHeight / 3 &&
+      homeSectionHeight + aboutSectionHeight + mySkillsSectionHeight / 3.6 &&
     scrollValue <=
       homeSectionHeight +
         aboutSectionHeight +
