@@ -14,11 +14,6 @@ window.addEventListener("scroll", function () {
 });
 
 // go to top
-function checkRefresh() {
-  window.location.hash = "#home";
-  window.scroll(0, 0);
-}
-
 var goToTopButton = document.getElementById("top");
 
 window.onscroll = function scrollFunction() {
@@ -31,6 +26,9 @@ window.onscroll = function scrollFunction() {
     goToTopButton.style.display = "none";
   }
 };
+function goToTop(){
+  window.scroll(0,0);
+}
 
 // light and dark mode
 
