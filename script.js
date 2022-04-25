@@ -126,3 +126,4 @@ window.addEventListener("scroll", () => {
     document.querySelector(".contact").classList.remove("active");
   }
 });
+

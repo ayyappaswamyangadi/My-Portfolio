@@ -2,7 +2,8 @@
 *::after,
 *::before {
   margin: 0 !important;
-  box-sizing: border-box;
+  /* padding: 0 !important; */
+  box-sizing: border-box !important;
   text-decoration: none !important;
   font-family: "spinnaker", "sans-serif";
   outline: none !important;
@@ -107,7 +108,9 @@ nav {
   background-attachment: fixed;
   background-size: cover;
   color: var(--secondary-color);
-  padding-left: 150px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .homeSection .home-content .text-1 {
@@ -239,6 +242,7 @@ nav {
   color: var(--primary-color);
   text-decoration: underline !important;
 }
+
 
 /* My Skills */
 
