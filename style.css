@@ -8,6 +8,7 @@
   font-family: "spinnaker", "sans-serif";
   outline: none !important;
 }
+
 :root {
   --background-color: rgba(0, 0, 0, 0.8);
   --text-color: rgba(255, 255, 255, 0.8);
@@ -64,7 +65,7 @@ p {
   font-size: 1.1rem;
 }
 
-/* style navabar */
+/* style navbar */
 
 nav {
   transition: all 0.3s ease !important;
@@ -197,6 +198,7 @@ nav {
 .aboutSection .about-content .left .text span {
   color: var(--primary-color);
 }
+
 .aboutSection .about-content .left .text {
   font-size: 2rem;
   font-weight: 600;
@@ -226,7 +228,7 @@ nav {
 }
 
 .about-content .container {
-  border: 1px solid black;
+  border: 1px solid var(--background-color);
 }
 
 .center-block {
@@ -243,6 +245,10 @@ nav {
   text-decoration: underline !important;
 }
 
+.working-duration {
+  float: right;
+}
+
 
 /* My Skills */
 
@@ -256,7 +262,7 @@ nav {
   height: 300px;
   width: 300px;
   position: relative;
-  border: 1px solid black;
+  border: 1px solid var(--background-color);
   border-radius: 10px;
   padding: 25px;
   box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.7);
@@ -303,7 +309,7 @@ nav {
 .imageSlider {
   border-radius: 10px;
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid var(--background-color);
   margin-left: 10px !important;
   margin-right: 10px;
 }
@@ -369,10 +375,8 @@ nav {
 
 /* contact me */
 .contactMe {
-  display: block;
   height: 250px;
-  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  box-shadow: 0.25em 0.25em 0.75em var(--background-color);
   padding: 20px;
   text-align: center;
 }

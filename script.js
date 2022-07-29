@@ -26,8 +26,8 @@ window.onscroll = function scrollFunction() {
     goToTopButton.style.display = "none";
   }
 };
-function goToTop(){
-  window.scroll(0,0);
+function goToTop() {
+  window.scroll(0, 0);
 }
 
 // light and dark mode
@@ -70,7 +70,7 @@ var contactSectionHeight =
 window.addEventListener("scroll", () => {
   let scrollValue = this.scrollY;
 
-  if (scrollValue <= homeSectionHeight / 1.5) {
+  if (scrollValue <= homeSectionHeight / 1.5 || scrollValue == 0) {
     history.pushState({}, "", "/#home");
     document.querySelector(".home").classList.add("active");
   } else {
@@ -105,7 +105,7 @@ window.addEventListener("scroll", () => {
       homeSectionHeight +
         aboutSectionHeight +
         mySkillsSectionHeight +
-        (projectsSectionHeight * 20) / 100
+        (projectsSectionHeight * 20) / 75
   ) {
     history.pushState({}, "", "/#projects");
     document.querySelector(".projects").classList.add("active");
@@ -118,7 +118,7 @@ window.addEventListener("scroll", () => {
     homeSectionHeight +
       aboutSectionHeight +
       mySkillsSectionHeight +
-      (projectsSectionHeight * 20) / 100
+      (projectsSectionHeight * 20) / 75
   ) {
     history.pushState({}, "", "/#contact");
     document.querySelector(".contact").classList.add("active");
@@ -126,4 +126,3 @@ window.addEventListener("scroll", () => {
     document.querySelector(".contact").classList.remove("active");
   }
 });
-
